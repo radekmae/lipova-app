@@ -1,0 +1,25 @@
+@import "../../vars/vars";
+
+.title {
+    text-align: center;
+}
+.title_white {
+    color: $white;
+}
+.title_left {
+    text-align: left;
+}
+.title_right {
+    text-align: right;
+}
+
+@media (min-width: $breakpoint_2) {
+}
+@media (min-width: $breakpoint_3) {
+}
+@media (min-width: $breakpoint_4) {
+}
+
+.title_no_margin_bottom {
+    margin-bottom: 0 !important;
+}

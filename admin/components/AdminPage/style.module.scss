@@ -1,0 +1,25 @@
+@import "admin/vars/vars";
+
+.admin_container {
+    font-family: $regular;
+    width: 100%;
+    max-width: 1360px;
+    margin: 100px auto 0;
+    overflow-x: hidden;
+    padding: 10px 20px;
+    overflow: hidden;
+
+    h2 {
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    h3 {
+        margin: 10px 0;
+        font-size: 30px;
+    }
+}
+
+.admin_content {
+    max-width: 600px;
+    margin: auto;
+}

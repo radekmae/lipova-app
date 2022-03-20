@@ -1,0 +1,275 @@
+@import "../../vars/vars";
+
+.housemap_section {
+    text-align: center;
+}
+
+.housemap_container {
+    position: relative;
+    width: 100%;
+}
+.housemap_content {
+    position: relative;
+}
+.housemap_controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //padding: 30px 0 20px;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 0px;
+    text-align: left;
+    position: relative;
+}
+// .housemap_controls_button {
+//     display: flex;
+//     align-items: center;
+//     cursor: default;
+//     @include transition(opacity 150ms ease-in-out, color 150ms);
+// }
+// .housemap_controls_button_hidden {
+//     opacity: 0;
+//     visibility: hidden;
+// }
+.housemap_controls_button_back {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    cursor: default;
+    @include transition(color 150ms);
+}
+.housemap_controls_button:hover,
+.housemap_controls_button_back:hover {
+    color: $main_color_1;
+}
+.housemap_controls_selected_house {
+    margin: auto;
+    text-align: center;
+    > div {
+        margin-top: 6px;
+    }
+}
+.icon_back {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 13px;
+}
+.housemap_controls_layers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.icon_arrow_left {
+    font-size: 20px;
+    margin-right: 10px;
+    transform: rotate(180deg);
+}
+.icon_arrow_right {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.housemap_image {
+    width: 100%;
+}
+// .housemap_image_test {
+//     width: 100%;
+//     max-width: 800px;
+//     margin: auto;
+// }
+.housemap_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // fill: rgba(128, 255, 0, 0.178);
+}
+.housemap_layer_house {
+    position: relative;
+    display: flex;
+}
+.housemap_layer_floor {
+    display: none;
+    position: relative;
+    max-width: 1480px;
+    margin: auto;
+    // padding: 0 0 20px;
+}
+.housemap_svg_polygon {
+    fill: rgba($black, 0);
+    @include transition(fill 150ms ease-in-out);
+    &:hover {
+        fill: rgba($black, 0.3);
+    }
+}
+.housemap_svg_polygon_disabled {
+    &:hover {
+        fill: rgba($red, 0.3);
+    }
+}
+
+.housemap_info_container {
+    // max-width: 720px;
+    // margin: auto;
+    // text-align: center;
+    // padding: 10px 15px;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.selected_polygon,
+.selected_polygon:hover {
+    fill: rgba($main_color_1, 0.45);
+}
+
+.pricelist_table_container {
+    display: inline-block;
+    overflow: scroll;
+    margin: auto;
+    width: 100%;
+}
+.pricelist_table {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pricelist_table_line {
+    background: $grey_light;
+    //min-width: 1250px;
+    position: relative;
+
+    &:first-child {
+        background: transparent;
+    }
+    &:nth-child(odd) {
+        background: transparent;
+    }
+}
+.pricelist_table_row {
+    display: flex;
+    width: 100%;
+    line-height: 46px;
+    cursor: default;
+
+    > div {
+        display: inline-block;
+        padding: 0 10px;
+        &:nth-child(1) {
+            // podlaží
+            width: 100px;
+        }
+        &:nth-child(2) {
+            // označení
+            width: 120px;
+        }
+        &:nth-child(3) {
+            // dispozice
+            width: 120px;
+        }
+        &:nth-child(4) {
+            // výměra
+            width: 100px;
+        }
+        &:nth-child(5) {
+            // balkon
+            width: 100px;
+        }
+        &:nth-child(6) {
+            // terasa
+            width: 90px;
+        }
+        &:nth-child(7) {
+            // sklep
+            width: 80px;
+            display: flex;
+            margin: auto;
+        }
+        &:nth-child(8) {
+            // parkovací stání
+            width: 160px;
+        }
+        &:nth-child(9) {
+            // cena
+            width: 180px;
+        }
+        &:nth-child(10) {
+            // karty bytů
+            width: 110px;
+            display: flex;
+        }
+        &:nth-child(11) {
+            // lupa
+            width: 60px;
+            display: flex;
+        }
+    }
+}
+.pricelist_table_row_active {
+    background: rgba($main_color_1, 0.45) !important;
+}
+.pricelist_table_row_header {
+    > div {
+        &:nth-child(10) {
+            display: inline-block;
+        }
+    }
+}
+.pricelist_table_svg_checkmark {
+    width: 28px;
+    display: block;
+    fill: $grey;
+    margin: auto;
+    cursor: default;
+}
+.pricelist_table_svg {
+    width: 24px;
+    display: block;
+    fill: $grey;
+    margin: auto;
+    cursor: default;
+    @include transition(fill, 150ms);
+}
+.pricelist_table_svg:hover {
+    fill: $main_color_1;
+}
+.pricelist_row_pdflink {
+    margin: auto;
+}
+
+.label {
+    line-height: 26px;
+    background: $main_color_1;
+    display: inline-block;
+    margin: 10px 0;
+    min-width: 100%;
+    color: $white;
+    cursor: default;
+    @include transition(background-color, 150ms);
+}
+.label:hover {
+    background-color: lighten($main_color_1, 2%);
+}
+
+@media (min-width: $breakpoint_1) {
+}
+@media (min-width: $breakpoint_2) {
+    .housemap_desc {
+        margin: 40px 0 0;
+    }
+}
+@media (min-width: $breakpoint_3) {
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}
+.housemap_section {
+    text-align: center;
+    padding-bottom: none;
+}

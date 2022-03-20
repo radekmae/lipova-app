@@ -1,0 +1,81 @@
+@import "admin/vars/vars";
+
+.formprojects_form {
+    padding-top: 20px;
+}
+
+.formprojects_button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 55px;
+}
+.formprojects_button:hover {
+    color: $admin_main;
+}
+.formprojects_button_icon {
+    margin: auto;
+    font-size: 21px;
+    @include transition(color, 150ms);
+}
+
+.formprojects_input_title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+.formprojects_image {
+    height: 130px;
+    width: 200px;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.formprojects_input {
+    box-sizing: border-box;
+    width: 100%;
+    color: $admin_grey_dark;
+    padding: 0 20px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px rgba($admin_grey_dark, 0.2) solid;
+    @include transition(border-color, 150ms);
+}
+.formprojects_input:hover {
+    border-color: rgba($admin_grey_dark, 0.6);
+}
+.formprojects_input:focus {
+    border-color: $admin_main;
+}
+.formprojects_input_price {
+    width: calc(50% - 10px);
+}
+.formprojects_textarea {
+    padding: 10px 20px;
+    min-height: 100px;
+}
+.formprojects_submit_button {
+    background: $admin_main;
+    color: $admin_white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    > div {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}

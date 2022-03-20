@@ -1,0 +1,28 @@
+@import "admin/vars/vars";
+
+.button {
+    // border: 2px solid $admin_black_30;
+    border-radius: 5px;
+    min-height: 44px;
+    position: relative;
+    display: inline-flex;
+    background-color: $admin_pink;
+    white-space: pre;
+    cursor: default;
+    @include transition(background-color, 200ms);
+}
+.button:hover {
+    background-color: lighten($admin_pink, 15%);
+}
+
+.button_disabled {
+    background-color: $admin_grey;
+    cursor: not-allowed;
+}
+.button_disabled:hover {
+    background-color: $admin_grey;
+}
+
+.button_title {
+    margin: auto;
+}

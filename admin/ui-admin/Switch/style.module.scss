@@ -1,0 +1,28 @@
+@import "admin/vars/vars";
+
+.switch {
+    width: 50px;
+    height: 30px;
+    padding: 4px;
+    background: $admin_red;
+    border-radius: 99px;
+    margin: auto;
+    @include transition(background-color, 200ms);
+}
+.switch_on {
+    background: $admin_green;
+}
+
+.switch_slider {
+    width: 22px;
+    height: 22px;
+    background: $admin_white;
+    border-radius: 99px;
+    @include transition(margin-left, 200ms);
+}
+.switch_slider_on {
+    margin-left: 20px;
+}
+
+@media (min-width: $breakpoint_3) {
+}

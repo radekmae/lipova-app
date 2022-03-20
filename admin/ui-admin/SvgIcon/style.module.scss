@@ -1,0 +1,16 @@
+@import "admin/vars/vars";
+
+.svgicon {
+    display: inline-block;
+    cursor: default;
+    // fill: rgb(255, 0, 221);
+}
+
+.svgicon_svg {
+    display: block;
+    margin: auto;
+
+    > circle {
+        fill: white;
+    }
+}

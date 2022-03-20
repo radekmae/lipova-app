@@ -1,0 +1,33 @@
+@import "../../vars/vars";
+
+.button {
+    min-width: 140px;
+    min-height: 34px;
+    padding: 0 20px;
+    position: relative;
+    display: inline-flex;
+    background-color: $dark_grey;
+    white-space: pre;
+    cursor: default;
+    @include transition(background-color, 150ms);
+}
+.button:hover {
+    background-color: lighten($dark_grey, 12%);
+}
+.button_title {
+    margin: auto;
+}
+
+.button_large {
+    min-width: 210px;
+    min-height: 40px;
+    padding: 0 30px;
+}
+
+@media (min-width: $breakpoint_2) {
+    .button {
+        min-width: 140px;
+        min-height: 44px;
+        padding: 0 50px;
+    }
+}

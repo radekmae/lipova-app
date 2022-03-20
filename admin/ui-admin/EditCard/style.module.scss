@@ -1,0 +1,65 @@
+@import "admin/vars/vars";
+
+.editcard {
+    margin: 0 20px 12px;
+    position: relative;
+    border: 1px solid rgba($admin_main, 0.25);
+    border-radius: 5px;
+    padding: 8px 20px;
+    min-height: 30px;
+    color: $admin_black;
+
+    @include transition(border-color, 200ms);
+}
+.editcard:hover {
+    border-color: $admin_pink;
+}
+.editcard_addNew {
+    background: rgba($admin_main, 0.8);
+    margin-bottom: 25px;
+    border-color: transparent;
+    color: $admin_white;
+}
+.editcard_servicesVariant {
+    margin: 0 0 8px;
+    padding: 6px 20px;
+}
+
+.editcard_header {
+    min-height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.editcard_title {
+    font-weight: 700;
+    font-size: 24px;
+    @include transition(color, 150ms);
+}
+.editcard_subtitle {
+    color: rgba($admin_grey, 0.5);
+    margin: 5px 0 0;
+}
+.editcard_button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+.editcard_button:hover {
+    color: $admin_pink;
+}
+.editcard_button_addNew:hover {
+    color: $admin_white;
+}
+.editcard_button_icon {
+    margin: auto;
+    font-size: 21px;
+    @include transition(color, 150ms);
+}
+
+.editcard_content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+}

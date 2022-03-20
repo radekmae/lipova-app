@@ -1,0 +1,202 @@
+@import "admin/vars/vars";
+
+.flats_table_container {
+    display: inline-block;
+    overflow: scroll;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+.flats_table {
+    width: 1300px;
+    margin: auto;
+}
+.flats_table_line {
+    background: $admin_grey_light;
+    position: relative;
+
+    &:first-child {
+        background: transparent;
+    }
+    &:nth-child(odd) {
+        background: transparent;
+    }
+}
+.flats_table_row {
+    display: flex;
+    width: 100%;
+    line-height: 46px;
+
+    > div {
+        display: inline-block;
+        padding: 0 10px;
+        &:nth-child(1) {
+            // v prodeji - switch
+            width: 100px;
+            display: flex;
+        }
+        &:nth-child(2) {
+            // objekt
+            width: 100px;
+        }
+        &:nth-child(3) {
+            // podlaží
+            width: 100px;
+        }
+        &:nth-child(4) {
+            // označení
+            width: 120px;
+        }
+
+        &:nth-child(5) {
+            // dispozice
+            width: 120px;
+        }
+        &:nth-child(6) {
+            // vymera
+            width: 100px;
+        }
+        &:nth-child(7) {
+            // balkon
+            width: 100px;
+        }
+        &:nth-child(8) {
+            // terasa
+            width: 100px;
+        }
+
+        &:nth-child(9) {
+            // sklep
+            width: 80px;
+            display: flex;
+        }
+        &:nth-child(10) {
+            // cena
+            width: 180px;
+        }
+        &:nth-child(11) {
+            // karty bytů
+            width: 110px;
+            display: flex;
+        }
+        &:nth-child(12) {
+            // tužka
+            width: 60px;
+            display: flex;
+        }
+    }
+}
+.flats_table_row_header {
+    > div {
+        &:nth-child(1) {
+            display: inline-block;
+        }
+        &:nth-child(11) {
+            display: inline-block;
+        }
+        &:nth-child(13) {
+            display: inline-block;
+        }
+        &:nth-child(14) {
+            display: inline-block;
+        }
+    }
+}
+.flats_table_svg_checkmark {
+    width: 28px;
+    display: block;
+    fill: $admin_grey_dark;
+    color: $admin_grey;
+    margin: auto;
+    cursor: default;
+}
+.flats_table_svg {
+    width: 24px;
+    font-size: 24px;
+    display: block;
+    fill: $admin_grey_dark;
+    color: $admin_grey_dark;
+    margin: auto;
+    cursor: default;
+    @include transition(fill, 150ms);
+
+    // > div {
+    //     width: 50px;
+    //     height: 55px;
+    //     display: flex;
+    //     flex-direction: row;
+    //     color: $admin_black;
+    //     @include transition(color, 200ms);
+    // }
+    // > div:hover {
+    //     color: $admin_pink;
+    // }
+}
+.flats_table_svg:hover {
+    fill: $admin_main;
+    color: $admin_main;
+}
+.flats_table_svg_icon {
+    width: 24px;
+    font-size: 24px;
+    display: block;
+    fill: $admin_grey_dark;
+    color: $admin_grey_dark;
+    margin: auto;
+    cursor: default;
+    @include transition(fill, 150ms);
+}
+.flats_table_svg_icon:hover {
+    fill: $admin_main;
+    color: $admin_main;
+}
+
+.flats_row_pdflink {
+    display: flex;
+    margin: auto;
+}
+.flats_input {
+    width: calc(100% - 10px);
+    height: 25px;
+    text-align: center;
+}
+.flats_input_disabled {
+    display: none;
+}
+
+.flats_taxinfo {
+    line-height: 150%;
+    color: $admin_grey;
+}
+.label {
+    line-height: 26px;
+    background: $admin_main;
+    display: inline-block;
+    margin: 10px 0;
+    min-width: 100%;
+    color: $admin_white;
+    cursor: default;
+    @include transition(background-color, 150ms);
+}
+.label:hover {
+    background-color: lighten($admin_main, 8%);
+}
+.label_disabled {
+    background-color: $admin_grey_light;
+}
+.label_disabled:hover {
+    background-color: $admin_grey;
+}
+
+@media (min-width: $breakpoint_2) {
+    .flats_item {
+        > div {
+            &:last-child {
+                min-width: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint_3) {
+}

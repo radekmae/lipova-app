@@ -1,0 +1,109 @@
+@import "../../vars/vars";
+
+.location_image {
+    height: 350px;
+    // background-image: url("assets/map1.svg");
+    // background-size: cover;
+    // background-position: center center;)
+    position: relative;
+}
+.location_overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark_grey, 0.7);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    cursor: default;
+    @include transition(
+        opacity 400ms ease-in-out,
+        visibility 400ms ease-in-out
+    );
+
+    &:hover {
+        .location_overlay_icon {
+            opacity: 0.9;
+        }
+        .location_overlay_title {
+            opacity: 1;
+        }
+    }
+}
+.location_overlay_disabled {
+    visibility: hidden;
+    opacity: 0;
+}
+.location_overlay_content {
+    margin: auto;
+    text-align: center;
+}
+.location_overlay_icon {
+    font-size: 60px;
+    color: $white;
+    opacity: 0.5;
+    @include transition(opacity 150ms ease-in-out);
+}
+.location_overlay_title {
+    margin-top: 20px;
+    color: $white;
+    opacity: 0;
+    @include transition(opacity 150ms ease-in-out);
+}
+
+.location_section {
+    color: $black;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
+}
+
+.location_pin {
+    flex: 0 100%;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.location_pin_icon {
+    width: 25px !important;
+    margin-right: 8px;
+    fill: $main_color_1 !important;
+}
+
+@media (min-width: $breakpoint_1) {
+    // .location_image {
+    //     background-image: url("assets/map2.svg");
+    // }
+    .location_pin {
+        height: 30px;
+        line-height: 30px;
+    }
+    .location_pin_icon {
+        width: 30px !important;
+    }
+}
+@media (min-width: 670px) {
+    // .location_image {
+    //     background-image: url("assets/map3.svg");
+    // }
+    .location_pin {
+        flex: 0 50%;
+    }
+}
+@media (min-width: $breakpoint_3) {
+    // .location_image {
+    //     background-image: url("assets/map4.svg");
+    // }
+    .location_image {
+        height: 450px;
+    }
+}
+@media (min-width: $breakpoint_4) {
+    // .location_image {
+    //     background-image: url("assets/map5.svg");
+    // }
+}
+@media (min-width: $breakpoint_5) {
+}

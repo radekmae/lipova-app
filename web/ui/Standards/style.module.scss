@@ -1,0 +1,34 @@
+@import "../../vars/vars";
+
+.standards_title {
+    color: $black;
+    margin: 20px 0 15px;
+}
+.standards_items {
+    margin-bottom: 15px;
+    &:last-child {
+        margin: 0;
+    }
+}
+.standards_svg {
+    width: 40px;
+    margin: 10px auto;
+    display: block;
+    fill: $main_color_1;
+    cursor: default;
+    @include transition(fill, 150ms);
+}
+.standards_item {
+    padding: 0 25px;
+    text-align: center;
+    display: inline-block;
+    color: lighten($main_color_1, 15%);
+    cursor: default;
+    @include transition(color, 150ms);
+}
+.standards_item:hover {
+    color: lighten($grey, 15%);
+    .standards_svg {
+        fill: $grey;
+    }
+}

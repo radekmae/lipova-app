@@ -1,0 +1,28 @@
+@import "web/vars/vars";
+
+.animated_menu {
+    width: 100%;
+    max-width: 400px;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    background: rgba($dark_grey, 0.96);
+    float: right;
+}
+.animated_menu_content {
+    padding: 10px 0;
+    border-top: 1px solid rgba($white, 0.2);
+}
+.animated_menu_link {
+    cursor: pointer;
+    padding: 10px 20px;
+
+    @include transition(
+        color 200ms ease-in-out,
+        border-color 200ms ease-in-out
+    );
+    &:hover {
+        color: $main_color_1;
+    }
+}

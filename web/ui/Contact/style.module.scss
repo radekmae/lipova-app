@@ -1,0 +1,85 @@
+@import "../../vars/vars";
+
+.kontakt {
+    background: $dark_grey;
+    color: $white;
+    text-align: center;
+}
+
+.kontakt_content {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.kontakt_logo {
+    width: 170px;
+    max-width: 330px;
+    height: 106px;
+    margin: -7px 0;
+    background: url("assets/logo.svg"); // url("assets/logo_label_white.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+
+.kontakt_content_2 {
+    display: flex;
+    flex-direction: column;
+}
+.kontakt_content_2_margin {
+    margin-bottom: 28px;
+}
+
+.kontakt_line,
+.kontakt_line_2 {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 6px;
+}
+.kontakt_line_2 {
+    margin-top: 4px;
+}
+
+.kontakt_icon,
+.kontakt_icon_2 {
+    fill: white;
+    margin-right: 8px;
+    height: 25px;
+    width: 30px;
+    display: flex;
+}
+
+.kontakt_icon_2 {
+    fill: $main_color_1;
+}
+
+.kontakt_link {
+    color: $main_color_1;
+    @include transition(color, 150ms);
+}
+.kontakt_link:hover {
+    color: $white;
+}
+
+@media (min-width: $breakpoint_3) {
+    .kontakt {
+        text-align: left;
+    }
+    .kontakt_content {
+        flex-direction: row;
+        > div {
+            flex: 1;
+        }
+    }
+    .kontakt_content_2 {
+        display: block;
+        padding-left: 50px;
+    }
+    .kontakt_logo {
+        width: 100%;
+        max-width: 240px;
+        height: 95px;
+    }
+}

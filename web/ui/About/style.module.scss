@@ -1,0 +1,35 @@
+@import "../../vars/vars";
+
+.about_heading {
+    margin: 1px 0 2px;
+}
+.about_image {
+    width: 100%;
+    padding-top: 60%;
+    background: url("assets/city.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+@media (min-width: $breakpoint_1) {
+    .about_heading {
+        margin: 11px 0 12px;
+    }
+}
+@media (min-width: $breakpoint_2) {
+    .about_image {
+        padding-top: 25%;
+    }
+}
+@media (min-width: $breakpoint_3) {
+    .about_image {
+        background-attachment: fixed;
+    }
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}

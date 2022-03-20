@@ -1,0 +1,60 @@
+@import "admin/vars/vars";
+
+.lockadmin {
+    // height: 100px;
+    background: $admin_grey_light;
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.lockadmin_content {
+    display: flex;
+    align-items: center;
+    > div:nth-child(1) {
+        margin: 0 20px;
+    }
+    > div:nth-child(2) {
+        flex: 1;
+    }
+}
+
+.formprojects_input_title {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.formprojects_input {
+    box-sizing: border-box;
+    width: 100%;
+    color: $admin_grey_dark;
+    padding: 0 20px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba($admin_main, 0.25);
+    @include transition(border-color, 150ms);
+}
+.formprojects_input:hover {
+    border-color: rgba($admin_main, 0.6);
+}
+.formprojects_input:focus {
+    border-color: $admin_main;
+}
+.formprojects_input_price {
+    width: calc(50% - 10px);
+}
+.formprojects_submit_button {
+    background: $admin_main;
+    color: $admin_white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}

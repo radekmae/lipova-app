@@ -1,0 +1,25 @@
+/* COLORS */
+
+$dark_grey: #2f2f2f;
+$black: #000000;
+$white: #ffffff;
+$red: #b10606;
+
+$main_color_1: #7bb342;
+
+// old
+
+$dark_green: #455955;
+$light_grey: #25282a15;
+
+$grey: #646363;
+$grey_lighten: lighten($grey, 15%);
+
+// old ještě vic
+$grey_dark: #25282a;
+
+$grey_light: #efefef;
+$dark_blue: #041e42;
+$dark_blue_85: rgba(4, 30, 66, 0.75);
+$white_75: rgba(255, 255, 255, 0.1);
+$black_75: rgba(0, 0, 0, 0.3);

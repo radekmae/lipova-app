@@ -1,0 +1,41 @@
+@import "../../vars/vars";
+
+.infotable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $grey;
+}
+.infotable_row {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    > div {
+        padding: 5px 6px;
+    }
+    > div:nth-child(1) {
+        min-width: 100px;
+    }
+    &:nth-child(odd) {
+        background: $grey_light;
+    }
+}
+
+@media (min-width: $breakpoint_1) {
+    .infotable_row {
+        div {
+            padding: 7px 8px;
+        }
+        > div:nth-child(1) {
+            min-width: 200px;
+        }
+    }
+}
+@media (min-width: $breakpoint_2) {
+}
+@media (min-width: $breakpoint_3) {
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}

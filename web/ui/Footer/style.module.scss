@@ -1,0 +1,23 @@
+@import "../../vars/vars";
+
+.footer {
+    background: $black;
+    color: $white;
+    text-align: center;
+    height: 80px;
+    display: flex;
+}
+
+.footer_logo {
+    width: 120px;
+    height: 40px;
+    background: url("assets/logo.svg"); // url("assets/logo_label_white.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    opacity: 0.4;
+}
+
+@media (min-width: 600px) {
+}

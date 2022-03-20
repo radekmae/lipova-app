@@ -1,0 +1,17 @@
+@import "../../vars/vars";
+
+.vizualizace {
+    background: $grey_light;
+}
+.vizualizace_desktop {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .vizualizace_desktop {
+        display: block;
+    }
+    .vizualizace_mobile {
+        display: none;
+    }
+}

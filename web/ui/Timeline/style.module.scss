@@ -1,0 +1,42 @@
+@import "../../vars/vars";
+
+.timeline_table {
+    margin: auto;
+    // transform: translateX(-50px);
+    display: inline-flex;
+}
+.timeline_column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    &:first-child {
+        width: 30px;
+        margin-left: 30px;
+    }
+
+    > div {
+        height: 56px;
+        div {
+            color: $grey;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_1) {
+}
+@media (min-width: $breakpoint_2) {
+    .timeline {
+        min-height: 310px;
+    }
+    .timeline_column {
+        > div {
+            height: 60px;
+        }
+    }
+}
+@media (min-width: $breakpoint_3) {
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}

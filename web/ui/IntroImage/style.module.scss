@@ -1,0 +1,63 @@
+@import "../../vars/vars";
+
+.intro_image {
+    width: 100%;
+    height: 380px;
+    padding-top: 53px;
+    position: relative;
+    background: url("assets/bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+// .intro_image_logo {
+//     opacity: 1;
+//     position: absolute;
+//     bottom: 10px;
+//     right: 30px;
+//     width: 160px;
+//     height: 70px;
+//     background: url("assets/logo.svg");
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     -webkit-background-size: contain;
+//     -moz-background-size: contain;
+//     -o-background-size: contain;
+//     background-size: contain;
+// }
+
+@media (min-width: 410px) {
+    .intro_image {
+        height: 430px;
+    }
+}
+@media (min-width: $breakpoint_1) {
+    .intro_image {
+        height: 450px;
+    }
+    .intro_image_logo {
+        width: 200px;
+        height: 90px;
+    }
+}
+@media (min-width: $breakpoint_2) {
+    .intro_image {
+        height: 100vh;
+    }
+    .intro_image_logo {
+        width: 250px;
+        height: 90px;
+    }
+}
+@media (min-width: $breakpoint_3) {
+    .intro_image {
+        background-attachment: fixed;
+    }
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}

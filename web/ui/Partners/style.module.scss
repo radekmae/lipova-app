@@ -1,0 +1,63 @@
+@import "../../vars/vars";
+
+.partners {
+    display: flex;
+    max-width: 700px;
+    margin: auto;
+}
+.partners_item {
+    flex: 1;
+    padding: 0 10px;
+    text-align: center;
+}
+.partners_image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    // width: 100%;
+    max-width: 160px;
+    height: 60px;
+    margin: 0 auto 10px;
+}
+
+.img1 {
+    background-image: url("assets/1.svg");
+}
+.img2 {
+    background-image: url("assets/2.svg");
+}
+.img3 {
+    background-image: url("assets/3.svg");
+}
+.img4 {
+    background-image: url("assets/4.svg");
+}
+
+@media (min-width: $breakpoint_1) {
+}
+@media (min-width: $breakpoint_2) {
+    .partners_image {
+        max-width: 200px;
+        height: 80px;
+        margin: 0 auto 30px;
+    }
+    .img1 {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .img3,
+    .img4,
+    .img5 {
+        max-width: 230px;
+    }
+    .img9 {
+        max-width: 280px;
+        margin-top: 30px;
+    }
+}
+@media (min-width: $breakpoint_3) {
+}
+@media (min-width: $breakpoint_4) {
+}
+@media (min-width: $breakpoint_5) {
+}

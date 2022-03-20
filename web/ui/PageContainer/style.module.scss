@@ -1,0 +1,25 @@
+@import "web/vars/vars";
+
+.page_container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px 15px;
+    margin: auto;
+}
+
+@media (min-width: $breakpoint_1) {
+    .page_container {
+        padding: 60px 40px;
+    }
+}
+@media (min-width: $breakpoint_2) {
+    .page_container {
+        padding: 80px 40px;
+    }
+}
+@media (min-width: $breakpoint_4) {
+}
+
+.no_bottom_padding {
+    padding-bottom: 0;
+}

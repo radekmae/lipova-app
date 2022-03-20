@@ -1,0 +1,38 @@
+@import "../../vars/vars";
+
+.soundbutton {
+    position: fixed;
+    right: 80px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    border-radius: 99px;
+    @include transition(opacity 200ms);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    &:hover {
+        .soundbutton_icon {
+            fill: $dark_grey !important;
+        }
+    }
+}
+.hidden {
+    opacity: 0;
+}
+
+.soundbutton_icon {
+    fill: $main_color_1 !important;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include transition(fill 200ms);
+}
+
+@media (min-width: 600px) {
+    .soundbutton {
+        right: 80px;
+    }
+}

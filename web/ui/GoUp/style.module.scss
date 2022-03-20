@@ -1,0 +1,40 @@
+@import "../../vars/vars";
+
+.goup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 99px;
+    @include transition(opacity 200ms);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    &:hover {
+        .arrow {
+            color: $dark_grey;
+        }
+    }
+}
+.goup_visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrow {
+    color: $main_color_1;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include transition(color 200ms);
+}
+
+@media (min-width: 600px) {
+    .goup {
+        right: 30px;
+    }
+}

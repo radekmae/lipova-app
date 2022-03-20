@@ -1,0 +1,17 @@
+@import "admin/vars/vars";
+
+.flags_icon {
+    width: 34px;
+    margin: 5px 5px 0 0;
+    fill: $admin_grey;
+    background-color: $admin_white;
+    border-radius: 99px;
+    @include transition(fill, 150ms);
+}
+.flags_icon:hover {
+    fill: $admin_grey_lighter;
+}
+.flags_icon_active,
+.flags_icon_active:hover {
+    fill: $admin_main;
+}

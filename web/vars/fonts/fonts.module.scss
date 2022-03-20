@@ -1,0 +1,147 @@
+@import "../vars.scss";
+
+.h1 {
+    font-size: 20px;
+    font-family: $bold;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: $black;
+    letter-spacing: 4px;
+}
+.h2,
+.h2_white {
+    font-size: 14px;
+    font-family: $bold;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: $black;
+    letter-spacing: 2.8px;
+}
+.h3 {
+    font-size: 12px;
+    font-family: $regular;
+    text-transform: uppercase;
+    line-height: 16px;
+    color: $black;
+}
+
+.button_small {
+    font-size: 12px;
+    font-family: $regular;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 1px;
+}
+.button_large {
+    font-size: 16px;
+    font-family: $regular;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 1px;
+}
+
+.regular {
+    font-size: 11px;
+    font-family: $regular;
+    line-height: 18px;
+    color: $black;
+}
+.medium {
+    font-size: 11px;
+    font-family: $medium;
+    line-height: 18px;
+    color: $grey;
+}
+.bold {
+    font-size: 11px;
+    font-family: $bold;
+    line-height: 18px;
+    color: $black;
+}
+
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.justify {
+    text-align: justify;
+}
+
+.h2_white {
+    color: $white;
+}
+.white {
+    color: $white;
+}
+.main_color_1 {
+    color: $main_color_1;
+}
+.red {
+    color: $red;
+}
+.dark_green {
+    color: $dark_green;
+}
+.dark_grey {
+    color: $dark_grey;
+}
+
+@media (min-width: $breakpoint_1) {
+    .regular,
+    .medium,
+    .bold {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .h1 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .h2,
+    .h2_white {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .h3 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width: $breakpoint_2) {
+    .regular,
+    .medium,
+    .bold {
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .h1 {
+        font-size: 25px;
+        line-height: 29px;
+    }
+    .h2,
+    .h2_white {
+        font-size: 19px;
+        line-height: 25px;
+    }
+    .h3 {
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .button_small {
+        font-size: 14px;
+    }
+    .button_large {
+        font-size: 18px;
+    }
+}

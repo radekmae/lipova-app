@@ -1,0 +1,25 @@
+@import "web/vars/vars";
+
+.header_container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header {
+    height: 0;
+    background: rgba($dark_grey, 0.96);
+    opacity: 0;
+    visibility: hidden;
+    @include transition(background-color 400ms ease-in-out);
+}
+
+.header_content {
+    width: 100%;
+    min-height: 60px;
+    padding: 0 20px;
+    visibility: hidden;
+    opacity: 0;
+}

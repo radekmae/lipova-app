@@ -1,0 +1,33 @@
+@import "admin/vars/vars";
+
+.loader {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    z-index: 1200;
+    opacity: 1;
+    visibility: visible;
+    background: $admin_white;
+    @include transition(
+        opacity 500ms ease-in-out,
+        visibility 500ms ease-in-out
+    );
+}
+.loader_hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader_content {
+    margin: auto;
+    width: 100%;
+    max-width: 320px;
+    height: 110px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/admin/m3logo.svg);
+}

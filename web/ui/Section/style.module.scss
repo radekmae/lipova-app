@@ -1,0 +1,35 @@
+@import "../../vars/vars";
+
+.section {
+    // width: 100%;
+    max-width: 900px;
+    padding: 40px 15px;
+    margin: auto;
+}
+.section_fullwidth {
+    max-width: unset;
+    text-align: center;
+}
+
+@media (min-width: $breakpoint_1) {
+    .section {
+        padding: 60px 40px;
+    }
+}
+@media (min-width: $breakpoint_2) {
+    .section {
+        padding: 80px 40px;
+    }
+}
+@media (min-width: $breakpoint_3) {
+    .section {
+        padding: 100px 40px;
+    }
+}
+
+.no_bottom_padding {
+    padding-bottom: 0;
+}
+.no_top_padding {
+    padding-top: 0;
+}

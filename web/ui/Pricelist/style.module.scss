@@ -1,0 +1,178 @@
+@import "../../vars/vars";
+
+.pricelist_table_container {
+    display: inline-block;
+    overflow: scroll;
+    margin: auto;
+    width: 100%;
+}
+.pricelist_table {
+    width: 1220px;
+    margin: auto;
+}
+.pricelist_table_line {
+    background: $grey_light;
+    position: relative;
+
+    &:first-child {
+        background: transparent;
+    }
+    &:nth-child(odd) {
+        background: transparent;
+    }
+}
+.pricelist_table_row {
+    display: flex;
+    width: 100%;
+    line-height: 46px;
+
+    > div {
+        display: inline-block;
+        padding: 0 10px;
+        &:nth-child(1) {
+            // podlaží
+            width: 100px;
+        }
+        &:nth-child(2) {
+            // označení
+            width: 120px;
+        }
+        &:nth-child(3) {
+            // dispozice
+            width: 120px;
+        }
+        &:nth-child(4) {
+            // výměra
+            width: 100px;
+        }
+        &:nth-child(5) {
+            // balkon
+            width: 100px;
+        }
+        &:nth-child(6) {
+            // terasa
+            width: 90px;
+        }
+        &:nth-child(7) {
+            // sklep
+            width: 80px;
+            display: flex;
+            margin: auto;
+        }
+        &:nth-child(8) {
+            // parkovací stání
+            width: 160px;
+        }
+        &:nth-child(9) {
+            // cena
+            width: 180px;
+        }
+        &:nth-child(10) {
+            // karty bytů
+            width: 110px;
+            display: flex;
+        }
+        &:nth-child(11) {
+            // lupa
+            width: 60px;
+            display: flex;
+        }
+    }
+}
+.pricelist_table_row_header {
+    > div {
+        &:nth-child(10) {
+            display: inline-block;
+        }
+        &:nth-child(12) {
+            display: inline-block;
+        }
+        &:nth-child(13) {
+            display: inline-block;
+        }
+    }
+}
+.pricelist_table_svg_checkmark {
+    width: 28px;
+    display: block;
+    fill: $grey;
+    margin: auto;
+    cursor: default;
+}
+.pricelist_table_svg {
+    width: 24px;
+    display: block;
+    fill: $grey;
+    margin: auto;
+    cursor: default;
+    @include transition(fill, 150ms);
+}
+.pricelist_table_svg:hover {
+    fill: $main_color_1;
+}
+.pricelist_row_pdflink {
+    margin: auto;
+}
+
+.pricelist_cols {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    > div {
+        flex: 1;
+    }
+}
+
+.pricelist_taxinfo {
+    line-height: 150%;
+    color: $grey;
+}
+.label {
+    line-height: 26px;
+    background: $main_color_1;
+    display: inline-block;
+    margin: 10px 0;
+    min-width: 100%;
+    color: $white;
+    cursor: default;
+    @include transition(background-color, 150ms);
+}
+.label:hover {
+    background-color: lighten($main_color_1, 8%);
+}
+
+.pricelist_svg {
+    width: 40px;
+    margin: 10px auto;
+    display: block;
+    fill: $main_color_1;
+    cursor: default;
+    @include transition(fill, 150ms);
+}
+.pricelist_icon {
+    padding: 0 45px;
+    text-align: center;
+    display: inline-block;
+    color: lighten($main_color_1, 15%);
+    cursor: default;
+    @include transition(color, 150ms);
+}
+.pricelist_icon:hover {
+    color: lighten($grey, 15%);
+    .pricelist_svg {
+        fill: $grey;
+    }
+}
+
+@media (min-width: $breakpoint_2) {
+    .pricelist_item {
+        > div {
+            &:last-child {
+                min-width: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint_3) {
+}

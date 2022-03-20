@@ -1,0 +1,83 @@
+@import "web/vars/vars";
+
+.lock {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    background: $dark_grey; //rgba($black, 0.95);
+    @include transition(
+        opacity 500ms ease-in-out,
+        visibility 500ms ease-in-out
+    );
+}
+.lock_hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.lock_content {
+    margin: auto;
+    padding: 5px 30px;
+    // width: 100%;
+    // max-width: 600px;
+}
+
+.lock_logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 220px;
+    height: 110px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./assets/logo.svg);
+}
+
+.lock_form_content {
+    margin-top: 10px;
+}
+
+.lock_input {
+    box-sizing: border-box;
+    width: 100%;
+    color: $dark_grey;
+    padding: 0 20px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 3px transparent solid;
+    @include transition(border-color, 150ms);
+}
+.lock_input:hover {
+    border-color: rgba($main_color_1, 0.8);
+}
+.lock_input:focus {
+    border-color: $main_color_1;
+}
+
+.lock_input_wrongpass,
+.lock_input_wrongpass:hover,
+.lock_input_wrongpass:focus {
+    border-color: lighten($red, 10%);
+}
+
+.lock_submit {
+    background: $main_color_1;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    @include transition(background-color, 150ms);
+}
+.lock_submit:hover {
+    background-color: rgba($main_color_1, 0.7);
+}

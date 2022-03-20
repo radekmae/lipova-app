@@ -1,0 +1,54 @@
+@import "admin/vars/vars";
+
+.floors_table {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.floors_table_line {
+    background: $admin_grey_light;
+    position: relative;
+
+    &:first-child {
+        background: transparent;
+    }
+    &:nth-child(odd) {
+        background: transparent;
+    }
+}
+.floors_table_row {
+    display: flex;
+    width: 100%;
+    line-height: 46px;
+
+    > div {
+        display: inline-block;
+        padding: 0 10px;
+        flex: 1;
+
+        &:nth-child(3) {
+            // switch
+            display: flex;
+        }
+    }
+}
+.floors_table_row_header {
+    > div {
+        &:nth-child(3) {
+            display: inline-block;
+        }
+    }
+}
+
+@media (min-width: $breakpoint_2) {
+    .floors_item {
+        > div {
+            &:last-child {
+                min-width: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint_3) {
+}

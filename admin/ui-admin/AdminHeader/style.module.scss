@@ -1,0 +1,53 @@
+@import "admin/vars/vars";
+
+.adminheader {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: $regular;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid $admin_grey_light;
+    background: $admin_white;
+}
+
+.adminheader_button {
+    display: flex;
+    align-items: center;
+    height: 53px;
+    color: $admin_grey_dark;
+    padding: 0 20px;
+    cursor: default;
+    @include transition(color, 200ms);
+}
+.adminheader_button:hover {
+    color: $admin_pink;
+}
+.adminheader_button_icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.adminheader_icons {
+    display: flex;
+    padding: 0 10px 0 0;
+    > div {
+        width: 50px;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        color: $admin_grey_dark;
+        @include transition(color, 200ms);
+    }
+    > div:hover {
+        color: $admin_pink;
+    }
+}
+.adminheader_icon {
+    margin: auto;
+    font-size: 25px;
+}

@@ -1,0 +1,28 @@
+@import "web/vars/vars";
+
+.header_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+}
+.header_mobile_logo {
+    width: 140px;
+    height: 40px;
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/web/images/header/logo.svg);
+    @include transition(width 400ms ease-in-out, height 400ms ease-in-out);
+}
+
+@media (min-width: 1300px) {
+    .header_mobile {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
